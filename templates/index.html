@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ML Based Vehicle Performance Predictor</title>
+        <meta charset="utf-8">  
+        <link rel="stylesheet" href="static\css\main.css">
+    </head>
+    <body >
+        <video autoplay muted loop id="myVideo">
+            <source src="static\car.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+         <br><br>
+         <br>
+        <div class="form-container">
+            <form action="/model" method="POST"><br>
+               <br><br>
+               <br>
+               <br><br><br>
+               
+                <center><h1>Vehicle Performance predictor</h1></center><br>
+                <center><h2>ENTER DETAILS</h2></center>
+                <div class="field">
+                    <label for="no_of_cylinders">
+                        <p class="cylinders field-name">Number of Cylinders</p>
+                    </label>
+                    <input type="number" id="no_of_cylinders input" name="no_of_cylinders">
+                </div>
+
+                <div class="field">
+                    <label for="displacement">
+                        <p class="displacement field-name">Displacement</p>
+                    </label>
+                    <input type="number" id="displacement input" name="displacement">
+                </div>
+
+                <div class="field">
+                    <label for="horsepower">
+                        <p class="horsepower field-name">Horse Power</p>
+                    </label>
+                    <input type="number" id="horsepower input" name="horsepower">
+                </div>
+
+                <div class="field">
+                    <label for="weight">
+                        <p class="weight field-name">Weight</p>
+                    </label>
+                    <input type="number" id="weight input" name="weight">
+                </div>
+
+                <div class="field">
+                    <label for="acceleration">
+                        <p class="acceleration field-name">Acceleration</p>
+                    </label>
+                    <input type="number" id="acceleration input" name="acceleration">
+                </div>
+
+                <div class="field">
+                    <label for="model_year">
+                        <p class="model_year field-name">Model Year</p>
+                    </label>
+                    <input type="number" id="model_year input" name="model_year">
+                </div>
+
+                <div class="field">
+                    <label for="origin">
+                        <p class="origin field-name">Origin</p>
+                    </label>
+                    <input type="number" id="origin input" name="origin">
+                </div>
+
+                <input type="submit" value="submit" class="submit-btn btn">
+                <p class="result" id="result">{{y}} <span class="answer">{{z}}</span></p>
+            </form>
+            
+        </div>
+        
+    </body>
+</html>
